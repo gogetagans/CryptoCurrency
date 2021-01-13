@@ -38,7 +38,8 @@ export class AppComponent implements OnInit, OnDestroy{
 
     this._subscriptions.add(this._portfolioLineService.findAll().subscribe(({_embedded: embedded}) => {
       const {portfolioLines} = embedded;
-      console.log('portfolioLine',portfolioLines);
+      this.portfolioLines = portfolioLines;
+      console.log('portfolioLine',this.portfolioLines);
     })); 
 
   }

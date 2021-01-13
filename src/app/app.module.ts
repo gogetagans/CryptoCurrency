@@ -7,6 +7,7 @@ import { CurrencyService } from 'src/services/currency.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PortfolioService } from 'src/services/portfolio.service';
 import { PortfolioLineService } from 'src/services/portfolio-line.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PortfolioLineService } from 'src/services/portfolio-line.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [CurrencyService, PortfolioService, PortfolioLineService],
   bootstrap: [AppComponent]
