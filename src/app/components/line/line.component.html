@@ -1,0 +1,39 @@
+<div class="m-3">
+    <button type="button" class="btn btn-outline-primary mb-3" routerLink="/portfolio" [disabled]="true" (click)="handlerCreate()">
+        Add New Line
+    </button>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+         
+          <th scope="col">Id</th>            
+          <th scope="col">Amount</th>
+          <th scope="col">Currency</th>
+          <th scope="col">Portfolio</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+         
+          <td>
+            {{ id }}
+          </td>
+          <td>
+            {{ amount }}
+          </td>
+          <td>
+            {{ currency?.href }}
+          </td>
+          <td>
+            {{ portfolio?.href  }}
+          </td>
+        </tr>
+        </tbody>
+      </table>
+</div>
+<button type="button" class="btn btn-outline-primary ml-3 mr-2" (click)="handleEditPortfolioLine(id)">
+    Edit
+ </button>
+ <button type="button" class="btn btn-outline-danger ml-3 mr-2" (click)="handleDeletePortfolioLine(id)">
+    Delete
+ </button>

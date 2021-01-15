@@ -7,7 +7,8 @@ export interface PortfolioLine {
     _links?:    WelcomeLinks;
     page?:      Page;
     amount?:    number;
-    currency?:  Currency;
+    portfolio?: string;
+    currency?:  Currency | string;
 }
 
 
@@ -28,11 +29,10 @@ export interface First {
 }
 
 export interface WelcomeLinks {
-    first:   First;
-    self:    Self;
-    next:    First;
-    last:    First;
-    profile: First;
+    currency:   First;
+    portfolio:  First;
+    portfolioLine: First;
+    self:    First;
 }
 
 export interface Self {

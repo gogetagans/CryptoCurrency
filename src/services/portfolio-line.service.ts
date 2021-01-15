@@ -4,6 +4,7 @@ import { PortfolioLine } from './interfaces/portfolio-line.interface';
 import { CrudService } from './crud.service';
 
 import { environment } from '../environments/environment';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',

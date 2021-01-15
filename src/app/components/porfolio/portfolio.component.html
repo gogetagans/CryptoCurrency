@@ -1,0 +1,17 @@
+<div class="m-3">
+    <form class="m-3" [formGroup]="form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name">
+           
+          </div>
+    </form>
+</div>
+<div class="m-3">
+    <button type="button" class="btn btn-outline-primary ml-3" (click)="handlerBack()">
+        Back
+     </button>
+    <button type="button" class="btn btn-outline-primary ml-3" (click)="handlerCreate()" [disabled]="form.invalid">
+        Save
+     </button>
+</div>

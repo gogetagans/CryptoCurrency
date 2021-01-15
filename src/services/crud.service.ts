@@ -26,7 +26,8 @@ export abstract class CrudService<T, ID> implements CrudOperations<T, ID> {
   }
 
   delete(id: ID): Observable<T> {
-    return this._http.delete<T>(`${this._base}/${id}`);
+    return this._http.delete<T>(`${this._base}/${id}`
+    );
   }
 
 }
